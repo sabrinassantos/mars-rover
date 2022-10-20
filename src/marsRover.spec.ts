@@ -1,5 +1,5 @@
 import { Coordenada } from "./coordenada";
-import { Direcao, giraParaDireita } from "./direcao";
+import { Direcao } from "./direcao";
 import { MarsRover } from "./marsRover";
 
 describe('Testing giraParaDireita', () => {
@@ -7,7 +7,7 @@ describe('Testing giraParaDireita', () => {
     it('se direção for Norte deve mudar direção para Leste', () => {
         const coordenada = new Coordenada(0,0);
         const marsRoverMock = new MarsRover(coordenada, Direcao.Norte) ;
-        const sut = giraParaDireita(marsRoverMock)
+        const sut = marsRoverMock.giraParaDireita(marsRoverMock)
     
         expect(sut.direcao).toBe(Direcao.Leste);
     });
@@ -15,7 +15,7 @@ describe('Testing giraParaDireita', () => {
     it('se direção for Leste deve mudar direção para Sul', () => {
         const coordenada = new Coordenada(0,0);
         const marsRoverMock = new MarsRover(coordenada, Direcao.Leste) ;
-        const sut = giraParaDireita(marsRoverMock)
+        const sut = marsRoverMock.giraParaDireita(marsRoverMock)
     
         expect(sut.direcao).toBe(Direcao.Sul);
     });
@@ -23,7 +23,7 @@ describe('Testing giraParaDireita', () => {
     it('se direção for Sul deve mudar direção para Oeste', () => {
         const coordenada = new Coordenada(0,0);
         const marsRoverMock = new MarsRover(coordenada, Direcao.Sul) ;
-        const sut = giraParaDireita(marsRoverMock)
+        const sut = marsRoverMock.giraParaDireita(marsRoverMock)
     
         expect(sut.direcao).toBe(Direcao.Oeste);
     });
@@ -31,7 +31,7 @@ describe('Testing giraParaDireita', () => {
     it('se direção for Oeste deve mudar direção para Norte', () => {
         const coordenada = new Coordenada(0,0);
         const marsRoverMock = new MarsRover(coordenada, Direcao.Oeste) ;
-        const sut = giraParaDireita(marsRoverMock)
+        const sut = marsRoverMock.giraParaDireita(marsRoverMock)
     
         expect(sut.direcao).toBe(Direcao.Norte);
     });

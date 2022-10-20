@@ -1,5 +1,5 @@
 import { Coordenada } from "./coordenada";
-import { Direcao, giraParaDireita, giraParaEsquerda } from "./direcao";
+import { Direcao } from "./direcao";
 import { MarsRover } from "./marsRover";
 import { validaComando } from "./validaComando";
 
@@ -22,10 +22,10 @@ const execute = () => {
 const comando = (comando: string, marsRover: MarsRover): MarsRover => {   
     switch (comando) {
         case 'L':
-           marsRover = giraParaEsquerda(marsRover);
+           marsRover = marsRover.giraParaEsquerda(marsRover);
            break;
         case 'R':
-            marsRover = giraParaDireita(marsRover);
+            marsRover = marsRover.giraParaDireita(marsRover);
             break;
         case 'M':
             marsRover = marsRover.move(marsRover);
