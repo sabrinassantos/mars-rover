@@ -7,19 +7,39 @@ export class MarsRover {
         public direcao: Direcao
     ){}
 
+    moveParaNorte() : Coordenada{       
+      this.coordenada.y = this.coordenada.y + 1;
+      return this.coordenada;
+    }
+
+    moveParaSul() : Coordenada{
+      this.coordenada.y = this.coordenada.y - 1;
+      return this.coordenada;
+     
+    }
+
+    moveParaLeste() : Coordenada{
+      this.coordenada.x = this.coordenada.x + 1;
+      return this.coordenada;
+    }
+    moveParaOeste(): Coordenada{
+        this.coordenada.x = this.coordenada.x - 1;
+        return this.coordenada;
+    }
+
     move = (marsRover: MarsRover): MarsRover =>{
         switch (marsRover.direcao) {
             case Direcao.Norte:
-                marsRover.coordenada = this.coordenada.moveParaNorte(this.coordenada);
+                this.moveParaNorte();
                 break;
             case Direcao.Sul:
-                marsRover.coordenada = this.coordenada.moveParaSul(this.coordenada);
+               this.moveParaSul();
                 break;
             case Direcao.Oeste:
-                marsRover.coordenada = this.coordenada.moveParaOeste(this.coordenada);
+                this.moveParaOeste();
                 break;
             case Direcao.Leste:
-                marsRover.coordenada = this.coordenada.moveParaLeste(this.coordenada);
+                this.moveParaLeste();
                 break;
             default:
                 break;
