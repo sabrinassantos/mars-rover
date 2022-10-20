@@ -1,5 +1,5 @@
-import { Coordenada } from "./coordenada";
-import { Direcao } from "./direcao";
+import { Coordenada } from "../coordenada";
+import { Direcao } from "../../direcao";
 
 export class MarsRover {
     constructor(

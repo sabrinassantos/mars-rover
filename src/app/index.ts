@@ -1,12 +1,12 @@
-import { Coordenada } from "./coordenada";
-import { Direcao } from "./direcao";
-import { MarsRover } from "./marsRover";
-import { validaComando } from "./validaComando";
+import { Coordenada } from "../entities/coordenada";
+import { Direcao } from "../direcao";
+import { MarsRover } from "../entities/marsRover/marsRover";
+import { validaComando } from "../validaComando";
 
 const execute = () => {
     const coordenada = new Coordenada(0,0);
     const direcao = Direcao.Norte;
-    const input = 'MMR';
+    const input = 'MMRM';
     const comandoArray = Array.from(input.toUpperCase());
     let marsRover = new MarsRover(coordenada, direcao)
     if (validaComando(comandoArray)){
