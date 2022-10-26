@@ -6,4 +6,5 @@ export class Coordenada {
         this.x = x;
         this.y = y;
     }
+    
 }

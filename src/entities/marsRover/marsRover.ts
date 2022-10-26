@@ -7,23 +7,25 @@ export class MarsRover {
         public direcao: Direcao
     ){}
 
-    moveParaNorte() : Coordenada{       
-      this.coordenada.y = this.coordenada.y + 1;
+    voltaParaFimSeNegativo = () => 10;
+    voltaParaInicioSeMaior = () => 0;
+    
+    moveParaNorte() : Coordenada{     
+      this.coordenada.y = this.coordenada.y < 0 ? this.voltaParaFimSeNegativo() : this.coordenada.y + 1 > 10 ? this.voltaParaInicioSeMaior() : this.coordenada.y + 1;
       return this.coordenada;
     }
 
     moveParaSul() : Coordenada{
-      this.coordenada.y = this.coordenada.y - 1;
+      this.coordenada.y =  this.coordenada.y > 10 ? this.voltaParaInicioSeMaior() : this.coordenada.y - 1 < 0 ? this.voltaParaFimSeNegativo() : this.coordenada.y - 1;
       return this.coordenada;
-     
     }
 
     moveParaLeste() : Coordenada{
-      this.coordenada.x = this.coordenada.x + 1;
+      this.coordenada.x = this.coordenada.x < 0 ? this.voltaParaFimSeNegativo() : this.coordenada.x + 1 > 10 ? this.voltaParaInicioSeMaior() : this.coordenada.x + 1;
       return this.coordenada;
     }
     moveParaOeste(): Coordenada{
-        this.coordenada.x = this.coordenada.x - 1;
+        this.coordenada.x = this.coordenada.x > 10 ? this.voltaParaInicioSeMaior() : this.coordenada.x - 1 < 0 ? this.voltaParaFimSeNegativo() : this.coordenada.x - 1;
         return this.coordenada;
     }
 
