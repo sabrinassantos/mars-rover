@@ -66,7 +66,7 @@ export class MarsRover {
           default:
             break;
         }
-        return marsRover
+        return marsRover;
       }
     
     giraParaEsquerda = (marsRover: MarsRover) : MarsRover => {
