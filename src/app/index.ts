@@ -35,6 +35,7 @@ const comando = (comando: string, marsRover: MarsRover): MarsRover => {
     }
     return marsRover;
 }
+export default comando;
 
 
 execute();
