@@ -49,7 +49,8 @@ describe('Testing MoveParaOeste', () => {
         const coordenadaMock = new Coordenada(1,0);
         const marsRoverMock = new MarsRover(coordenadaMock, Direcao.Leste);
        
-        const sut = marsRoverMock.moveParaLeste();
+        const sut = marsRoverMock.moveParaOeste();
         expect(sut.y).toBe(0);
     });
+    
 });
