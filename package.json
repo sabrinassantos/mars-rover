@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/app/index.ts",
     "build": "tsc",
     "test": "jest --coverage",
     "test:watch": "jest --watch"

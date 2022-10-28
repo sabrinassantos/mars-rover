@@ -1,5 +1,8 @@
-import comando from ".";
+
+
+
 import { Direcao } from "../direcao";
+import comando from "./comando";
 import { Coordenada } from "../entities/coordenada";
 import { MarsRover } from "../entities/marsRover/marsRover";
 
@@ -9,7 +12,7 @@ describe('Testing Comando', () => {
         const coordenadaMock = new Coordenada(0,0);
         const marsRoverMock = new MarsRover(coordenadaMock, Direcao.Norte);
         const spy = jest.spyOn(marsRoverMock, "giraParaEsquerda");
-        const sut = comando("L", marsRoverMock);
+        comando("L", marsRoverMock);
         expect(spy).toBeCalledTimes(1);
     });
 
@@ -29,3 +32,4 @@ describe('Testing Comando', () => {
         expect(spy).toBeCalledTimes(1);
     });
 });
+

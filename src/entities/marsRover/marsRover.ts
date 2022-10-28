@@ -25,8 +25,8 @@ export class MarsRover {
       return this.coordenada;
     }
     moveParaOeste(): Coordenada{
-        this.coordenada.x = this.coordenada.x > 10 ? this.voltaParaInicioSeMaior() : this.coordenada.x - 1 < 0 ? this.voltaParaFimSeNegativo() : this.coordenada.x - 1;
-        return this.coordenada;
+      this.coordenada.x = this.coordenada.x > 10 ? this.voltaParaInicioSeMaior() : this.coordenada.x - 1 < 0 ? this.voltaParaFimSeNegativo() : this.coordenada.x - 1;
+      return this.coordenada;
     }
 
     move = (marsRover: MarsRover): MarsRover =>{

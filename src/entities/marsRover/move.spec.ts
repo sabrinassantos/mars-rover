@@ -39,7 +39,7 @@ describe('Testing Move', () => {
     it('se direção for Leste deve chamar "moveParaLeste"', () => {
         const marsRoverMock = new MarsRover(coordenadaMock, Direcao.Leste);
         const spy = jest.spyOn(marsRoverMock, "moveParaLeste");
-        const sut = marsRoverMock.move(marsRoverMock);
+        marsRoverMock.move(marsRoverMock);
 
         expect(spy).toBeCalledTimes(1);
     });
