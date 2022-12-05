@@ -1,6 +1,6 @@
-import { Coordenada } from "../coordenada";
+import { Coordenada } from "../usecases/move-coordenada";
 import { Direcao } from "../../direcao";
-import { MarsRover } from "./marsRover";
+import { MarsRover } from "../../entities/marsRover";
 
 describe('Testing giraParaDireita', () => {
 

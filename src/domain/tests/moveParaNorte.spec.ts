@@ -1,5 +1,5 @@
 import { Direcao } from "../../direcao";
-import { Coordenada } from "../coordenada";
+import { Coordenada } from "../usecases/move-coordenada";
 import { MarsRover } from "./marsRover";
 
 

@@ -10,4 +10,6 @@ export const validaComando = (comandoArray: string[]) :  boolean => {
     
  
  }
+
+ 
  

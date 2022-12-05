@@ -1,6 +1,5 @@
 import { execute } from "./execute";
 
-const input_ = process.argv || "";
-
-const retorno =  execute(input_[2]);
+const input_ = process.argv[2] || "";
+const retorno =  execute(input_);
 console.log(retorno);

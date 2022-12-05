@@ -2,9 +2,9 @@
 
 
 import { Direcao } from "../direcao";
-import comando from "./comando";
-import { Coordenada } from "../entities/coordenada";
-import { MarsRover } from "../entities/marsRover/marsRover";
+import comando from "../domain/usecases/comando";
+import { Coordenada } from "../domain/usecases/move-coordenada";
+import { MarsRover } from "../entities/marsRover";
 
 describe('Testing Comando', () => {
 

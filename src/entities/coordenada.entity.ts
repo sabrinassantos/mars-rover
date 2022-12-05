@@ -1,4 +1,4 @@
-export class Coordenada {
+export class CoordenadaEntity {
     constructor(
         public x: number,
         public y: number
@@ -6,5 +6,4 @@ export class Coordenada {
         this.x = x;
         this.y = y;
     }
-    
 }

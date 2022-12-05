@@ -1,6 +1,6 @@
 
 
-import { Coordenada } from "../entities/coordenada";
+import { Coordenada } from "../domain/usecases/move-coordenada";
 import { execute } from "./execute";
 
 
